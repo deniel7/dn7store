@@ -50,7 +50,7 @@ Route::get('/', function () {
         Route::controller('item', 'ItemController');
 
     /* Transaction */
-        Route::controller('transaction', 'TransactionController');
+            Route::get('transaction/print', 'TransactionController@printDoc');
         Route::resource('transaction', 'TransactionController');
 
     /* Report */

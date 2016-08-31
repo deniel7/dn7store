@@ -9,7 +9,7 @@ class ItemTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('items')->delete();
+        DB::table('items')->truncate();
 
         DB::table('items')->insert([
             'model' => 'Longsleeves Nike Pro Combat',

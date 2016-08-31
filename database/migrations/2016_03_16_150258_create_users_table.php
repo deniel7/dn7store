@@ -7,8 +7,6 @@ class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
@@ -26,14 +24,12 @@ class CreateUsersTable extends Migration
             $table->integer('updated_by');
             $table->timestamps();
 
-            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+            // $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {

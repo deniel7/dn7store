@@ -14,9 +14,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{ asset('bower_components/AdminLTE/bootstrap/css/bootstrap.min.css') }}">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset('bower_components/font-awesome/css/font-awesome.min.css') }}">
-  <!-- Ion Icons -->
-    <link rel="stylesheet" href="{{ asset('bower_components/Ionicons/css/ionicons.min.css') }}">
-  <!-- Theme style -->
+    <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('bower_components/AdminLTE/dist/css/AdminLTE.min.css') }}">
   <!-- DataTables -->
   <link rel="stylesheet" href="{{ asset('bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.css') }}">
@@ -24,9 +22,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Datepicker -->
   <link rel="stylesheet" href="{{ asset('bower_components/AdminLTE/plugins/datepicker/datepicker3.css') }}">
 
-  <!-- Sweet Alert -->
-  <script src="{{ asset('bower_components/sweetalert/dist/sweetalert.min.js') }}"></script>
-  <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/sweetalert/dist/sweetalert.css') }}">
+
     
   <!-- Select2 -->
   <link rel="stylesheet" href="{{ asset('bower_components/AdminLTE/plugins/select2/select2.min.css') }}">

@@ -158,7 +158,7 @@ class TransactionController extends Controller
     //     return view('transaction/print');
     // }
 
-    public function getPrint(Request $request)
+    public function printDoc(Request $request)
     {
         $transaction_ids = $request->input('selected_transactions');
 

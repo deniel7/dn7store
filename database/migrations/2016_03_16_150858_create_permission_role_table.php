@@ -7,8 +7,6 @@ class CreatePermissionRoleTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
@@ -17,8 +15,8 @@ class CreatePermissionRoleTable extends Migration
             $table->integer('role_id');
             $table->timestamps();
 
-            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
-            $table->foreign('permission_id')->references('id')->on('permissions')->onDelete('cascade');
+            // $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+            // $table->foreign('permission_id')->references('id')->on('permissions')->onDelete('cascade');
 
             $table->primary(['permission_id', 'role_id']);
         });
@@ -26,8 +24,6 @@ class CreatePermissionRoleTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {

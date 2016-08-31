@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInit673dc2dbeee6f0c2856b868bb9add844
 {
     public static $files = array (
-        '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
@@ -88,6 +88,10 @@ class ComposerStaticInit673dc2dbeee6f0c2856b868bb9add844
             'Collective\\Html\\' => 16,
             'ClassPreloader\\' => 15,
             'Carbon\\' => 7,
+        ),
+        'B' => 
+        array (
+            'Barryvdh\\Cors\\' => 14,
         ),
         'A' => 
         array (
@@ -232,6 +236,10 @@ class ComposerStaticInit673dc2dbeee6f0c2856b868bb9add844
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
+        'Barryvdh\\Cors\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/barryvdh/laravel-cors/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -362,6 +370,14 @@ class ComposerStaticInit673dc2dbeee6f0c2856b868bb9add844
         'App\\Role' => __DIR__ . '/../..' . '/app/Role.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Attribute_Translator' => __DIR__ . '/..' . '/dompdf/dompdf/include/attribute_translator.cls.php',
+        'Barryvdh\\Cors\\HandleCors' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/HandleCors.php',
+        'Barryvdh\\Cors\\HandlePreflight' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/HandlePreflight.php',
+        'Barryvdh\\Cors\\HandlePreflightSimple' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/HandlePreflightSimple.php',
+        'Barryvdh\\Cors\\LumenServiceProvider' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/LumenServiceProvider.php',
+        'Barryvdh\\Cors\\ServiceProvider' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/ServiceProvider.php',
+        'Barryvdh\\Cors\\Stack\\Cors' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/Stack/Cors.php',
+        'Barryvdh\\Cors\\Stack\\CorsService' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/Stack/CorsService.php',
+        'Barryvdh\\Cors\\Util\\OriginMatcher' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/Util/OriginMatcher.php',
         'Block_Frame_Decorator' => __DIR__ . '/..' . '/dompdf/dompdf/include/block_frame_decorator.cls.php',
         'Block_Frame_Reflower' => __DIR__ . '/..' . '/dompdf/dompdf/include/block_frame_reflower.cls.php',
         'Block_Positioner' => __DIR__ . '/..' . '/dompdf/dompdf/include/block_positioner.cls.php',

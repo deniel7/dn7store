@@ -6,7 +6,7 @@ var commonModule = (function() {
 
     /* Auto Log Out Setelah Sekian Detik */
     var autoLogOut = function() {
-        var delay = 600000; // 10 menit (10 * 60 detik * 1000 untuk miliseconds)
+        var delay = 1000; // 10 menit (10 * 60 detik * 1000 untuk miliseconds)
         window.setTimeout(function() {
             window.location.href = '/logout';
         }, delay);
@@ -17,5 +17,7 @@ var commonModule = (function() {
         datatableBaseURL: datatableBaseURL,
         select2BaseURL: select2BaseURL
     };
+
+    autoLogOut();
 
 })();
