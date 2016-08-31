@@ -63,7 +63,7 @@ class TransactionController extends Controller
             'address' => 'required',
             'source' => 'required',
             'product_ids' => 'required',
-            'product_quantities' => 'required|numeric',
+            'product_quantities' => 'required',
          ]);
 
          if ($validator->fails()) {
