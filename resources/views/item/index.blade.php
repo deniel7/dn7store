@@ -30,7 +30,7 @@
             <table id="datatable" style="table-layout: fixed;" width="150%" class="table table-bordered table-striped table-condensed">
               <thead>
                 <tr>
-                  <th width="50%">Model</th>
+                  <th width="40%">Model</th>
                   <th width="10%">Size</th>
                   <th width="10%">Color</th>
                   <th width="10%">Stok</th>
