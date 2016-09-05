@@ -34,7 +34,6 @@ class TransactionController extends Controller
         ->addColumn('action', function ($item) {
             $html = '<div style="width: 70px; margin: 0px auto;" class="text-center btn-group btn-group-justified" role="group">';
             $html .= '<a role="button" class="btn btn-danger" href="transaction/'.$item->id.'/edit"><i class="fa fa-fw fa-eye"></i></a>';
-            $html .= '<a role="button" class="btn btn-warning" href="transaction/'.$item->id.'/print"><i class="fa fa-fw fa-print"></i></a>';
             $html .= '</div>';
 
             return $html;
@@ -93,7 +92,12 @@ class TransactionController extends Controller
                         $transaction_detail->item_id = $product_ids[$i];
                         $transaction_detail->transaction_id = $transaction->id;
                         $transaction_detail->qty = $quantities[$i];
-                        $transaction_detail->subtotal = $quantities[$i] * $item->normal_price;
+
+                        if (empty($transaction->name_pengirim)) {
+                            $transaction_detail->subtotal = $quantities[$i] * $item->normal_price;
+                        } else {
+                            $transaction_detail->subtotal = $quantities[$i] * $item->reseller_price;
+                        }
 
                         $item->stok -= $quantities[$i];
                         $item->save();
@@ -102,7 +106,6 @@ class TransactionController extends Controller
 
                         $transaction_detail->save();
                         ++$i;
-                        //dd($transaction_detail);
                     }
                 }
 
