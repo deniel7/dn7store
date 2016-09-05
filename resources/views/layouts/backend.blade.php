@@ -167,7 +167,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         1.0.0
       </div>
       <!-- Default to the left -->
-      <strong>Copyright &copy; 2015 <a href="http://www.yogyagroup.com">Yogya Group</a></strong>
+      <strong>Copyright &copy; 2015</strong>
     </footer>
 
 

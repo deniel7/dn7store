@@ -79,6 +79,8 @@ class TransactionController extends Controller
             $transaction->source = $request->input('source');
             $transaction->total = 0;
             $transaction->phone = $request->input('phone');
+            $transaction->name_pengirim = $request->input('name_pengirim');
+            $transaction->phone_pengirim = $request->input('phone_pengirim');
             $transaction->save();
 
             try {

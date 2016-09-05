@@ -36,21 +36,35 @@
           </div>
         </div>
         <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>Address</label>
-           <textarea class="form-control hresize" name="address">{{ old('address') }}</textarea>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Address</label>
+             <textarea class="form-control hresize" name="address">{{ old('address') }}</textarea>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Source</label>
+             <input type="text" name="source" class="text-left form-control" value="{{ old('source') }}">
+            </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Name Pengirim</label>
+              <input type="text" name="name_pengirim" value="{{ old('name_pengirim') }}" class="text-left form-control">
+            </div>
+          </div>
 
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>Source</label>
-           <input type="text" name="source" class="text-left form-control" value="{{ old('source') }}">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Phone Pengirim</label>
+              <input type="text" name="phone_pengirim" value="{{ old('phone_pengirim') }}" class="text-right form-control">
+            </div>
           </div>
         </div>
-
-  </div>
 </div>
 
 <div class="box">

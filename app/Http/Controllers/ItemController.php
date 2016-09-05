@@ -8,6 +8,7 @@ use DB;
 use App\Item;
 use Datatables;
 use Flash;
+use Illuminate\Support\Facades\Validator;
 
 class ItemController extends Controller
 {
@@ -47,11 +48,25 @@ class ItemController extends Controller
 
     public function store(Request $request)
     {
-        //DB::beginTransaction();
         $normal_price = str_replace(',', '', $request->input('normal_price'));
         $normal_price_ = str_replace('Rp', '', $normal_price);
         $reseller_price = str_replace(',', '', $request->input('reseller_price'));
         $reseller_price_ = str_replace('Rp', '', $reseller_price);
+
+        $validator = Validator::make($request->all(), [
+            'model' => 'required',
+            'size' => 'required',
+            'color' => 'required',
+            'stok' => 'required|numeric',
+            'normal_price' => 'required',
+            'reseller_price' => 'required',
+         ]);
+
+        if ($validator->fails()) {
+            return redirect('item/create')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
 
         $item = new Item();
         $item->model = $request->input('model');
@@ -66,11 +81,6 @@ class ItemController extends Controller
 
         DB::commit();
         Flash::success('Saved');
-        //} catch (\Exception $e) {
-            /* Something went wrong */
-            // Flash::error('Unable to save');
-            // DB::rollback();
-    //}
 
         return redirect('item');
     }
@@ -112,7 +122,7 @@ class ItemController extends Controller
         Flash::success('Saved');
         DB::commit();
 
-        return redirect('item/'.$item->id.'/edit');
+        return redirect('item/');
     }
 
     public function select2(Request $request)
