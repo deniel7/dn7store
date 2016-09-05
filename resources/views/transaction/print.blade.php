@@ -39,6 +39,10 @@
             <td>Alamat</td>
             <td>{{ $transaction->address }}</td>
         </tr>
+        <tr>
+        <td>Kurir</td>
+        <td>{{ $transaction->jne }}</td>
+        </tr>
 
         @foreach ($transaction->details as $detail) 
         <tr>

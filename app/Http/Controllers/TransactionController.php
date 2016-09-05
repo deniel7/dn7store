@@ -53,10 +53,16 @@ class TransactionController extends Controller
         $address = $request->input('address');
         $quantities = $request->input('product_quantities');
         $product_ids = $request->input('product_ids');
-        $i = 0;
-        //dd($request->input());
+        $jne_yes = $request->input('jne_yes');
+        if ($jne_yes == 1) {
+            $jne_yes = 'JNE YES';
+        } else {
+            $jne_yes = 'JNE REG';
+        }
 
-         $validator = Validator::make($request->all(), [
+        $i = 0;
+
+        $validator = Validator::make($request->all(), [
             'name' => 'required',
             'phone' => 'required|numeric',
             'address' => 'required',
@@ -65,61 +71,62 @@ class TransactionController extends Controller
             'product_quantities' => 'required',
          ]);
 
-         if ($validator->fails()) {
-             return redirect('transaction/create')
+        if ($validator->fails()) {
+            return redirect('transaction/create')
                         ->withErrors($validator)
                         ->withInput();
+        }
+
+        DB::beginTransaction();
+        $transaction = new Transaction();
+        $transaction->name = $request->input('name');
+        $transaction->address = $request->input('address');
+        $transaction->source = $request->input('source');
+        $transaction->total = 0;
+        $transaction->phone = $request->input('phone');
+        $transaction->name_pengirim = $request->input('name_pengirim');
+        $transaction->phone_pengirim = $request->input('phone_pengirim');
+        $transaction->jne = $jne_yes;
+        $transaction->save();
+
+        try {
+            $total = 0;
+            foreach ($product_ids as $product_id) {
+                $items = Item::where('id', '=', $product_ids[$i])->get();
+                if ($items->count() == 1) {
+                    $item = $items->first();
+                    $transaction_detail = new TransactionDetail();
+                    $transaction_detail->item_id = $product_ids[$i];
+                    $transaction_detail->transaction_id = $transaction->id;
+                    $transaction_detail->qty = $quantities[$i];
+
+                    if (empty($transaction->name_pengirim)) {
+                        $transaction_detail->subtotal = $quantities[$i] * $item->normal_price;
+                    } else {
+                        $transaction_detail->subtotal = $quantities[$i] * $item->reseller_price;
+                    }
+
+                    $item->stok -= $quantities[$i];
+                    $item->save();
+
+                    $total += $transaction_detail->subtotal;
+
+                    $transaction_detail->save();
+                    ++$i;
+                }
             }
 
-            DB::beginTransaction();
-            $transaction = new Transaction();
-            $transaction->name = $request->input('name');
-            $transaction->address = $request->input('address');
-            $transaction->source = $request->input('source');
-            $transaction->total = 0;
-            $transaction->phone = $request->input('phone');
-            $transaction->name_pengirim = $request->input('name_pengirim');
-            $transaction->phone_pengirim = $request->input('phone_pengirim');
+            $transaction->total = $total;
             $transaction->save();
 
-            try {
-                $total = 0;
-                foreach ($product_ids as $product_id) {
-                    $items = Item::where('id', '=', $product_ids[$i])->get();
-                    if ($items->count() == 1) {
-                        $item = $items->first();
-                        $transaction_detail = new TransactionDetail();
-                        $transaction_detail->item_id = $product_ids[$i];
-                        $transaction_detail->transaction_id = $transaction->id;
-                        $transaction_detail->qty = $quantities[$i];
+            DB::commit();
+            Flash::success('Saved');
+        } catch (\Exception $e) {
+            Flash::error('Unable to save');
+            DB::rollback();
+        }
 
-                        if (empty($transaction->name_pengirim)) {
-                            $transaction_detail->subtotal = $quantities[$i] * $item->normal_price;
-                        } else {
-                            $transaction_detail->subtotal = $quantities[$i] * $item->reseller_price;
-                        }
-
-                        $item->stok -= $quantities[$i];
-                        $item->save();
-
-                        $total += $transaction_detail->subtotal;
-
-                        $transaction_detail->save();
-                        ++$i;
-                    }
-                }
-
-                $transaction->total = $total;
-                $transaction->save();
-
-                DB::commit();
-                Flash::success('Saved');
-            } catch (\Exception $e) {
-                Flash::error('Unable to save');
-                DB::rollback();
-            }
-
-            return redirect('transaction');
+        return redirect('transaction');
     }
 
     public function edit($id)

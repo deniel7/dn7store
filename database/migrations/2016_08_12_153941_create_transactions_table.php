@@ -19,6 +19,7 @@ class CreateTransactionsTable extends Migration
             $table->bigInteger('total');
             $table->string('name_pengirim');
             $table->string('phone_pengirim');
+            $table->string('jne');
             $table->timestamps();
         });
     }
