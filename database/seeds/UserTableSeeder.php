@@ -12,11 +12,11 @@ class UserTableSeeder extends Seeder
         DB::table('users')->truncate();
 
         DB::table('users')->insert([
-            'full_name' => 'Admin Admin',
-            'username' => 'admin',
+            'full_name' => 'Deniel',
+            'username' => 'deniel',
             'email' => 'admin@demo.com',
             'role_id' => 1,
-            'password' => bcrypt('admin'),
+            'password' => bcrypt('Nerrazurri7'),
             'created_by' => 1,
             'updated_by' => 1,
             'created_at' => Date('Y-m-d H:i:s'),

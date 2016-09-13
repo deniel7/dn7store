@@ -18,6 +18,7 @@ class CreateItemsTable extends Migration
             $table->integer('stok');
             $table->bigInteger('normal_price');
             $table->bigInteger('reseller_price')->nullable();
+            $table->bigInteger('buy_price');
             $table->integer('created_by')->unsigned();
             $table->integer('updated_by')->unsigned();
             $table->timestamps();

@@ -52,6 +52,8 @@ class ItemController extends Controller
         $normal_price_ = str_replace('Rp', '', $normal_price);
         $reseller_price = str_replace(',', '', $request->input('reseller_price'));
         $reseller_price_ = str_replace('Rp', '', $reseller_price);
+        $buy_price = str_replace(',', '', $request->input('buy_price'));
+        $buy_price_ = str_replace('Rp', '', $buy_price);
 
         $validator = Validator::make($request->all(), [
             'model' => 'required',
@@ -60,6 +62,7 @@ class ItemController extends Controller
             'stok' => 'required|numeric',
             'normal_price' => 'required',
             'reseller_price' => 'required',
+            'buy_price' => 'required',
          ]);
 
         if ($validator->fails()) {
@@ -76,6 +79,7 @@ class ItemController extends Controller
 
         $item->normal_price = $normal_price_;
         $item->reseller_price = $reseller_price_;
+        $item->buy_price = $buy_price_;
         //dd($item->normal_price);
         $item->save();
 
@@ -106,6 +110,8 @@ class ItemController extends Controller
         $normal_price_ = str_replace('Rp', '', $normal_price);
         $reseller_price = str_replace(',', '', $request->input('reseller_price'));
         $reseller_price_ = str_replace('Rp', '', $reseller_price);
+        $buy_price = str_replace(',', '', $request->input('buy_price'));
+        $buy_price_ = str_replace('Rp', '', $buy_price);
         $stok = $request->input('stok');
         $model = strtoupper($request->input('model'));
         $size = $request->input('size');
@@ -113,6 +119,7 @@ class ItemController extends Controller
 
         $item->normal_price = $normal_price_;
         $item->reseller_price = $reseller_price_;
+        $item->buy_price = $buy_price_;
         $item->stok = $stok;
         $item->model = $model;
         $item->size = $size;

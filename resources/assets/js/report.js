@@ -1,6 +1,6 @@
-var transactionModule = (function(commonModule) {
+var reportModule = (function(commonModule) {
 
-    var datatableBaseURL = commonModule.datatableBaseURL + 'transactions';
+    var datatableBaseURL = commonModule.datatableBaseURL + 'report';
     var select2BaseURLItem = commonModule.select2BaseURL + 'items';
 
 
@@ -10,7 +10,7 @@ var transactionModule = (function(commonModule) {
         _applySelect2Product();
         _submit();
         _disableNumberInputScroll();
-        _printTransaction();
+
     };
 
     var _disableNumberInputScroll = function() {
@@ -117,11 +117,6 @@ var transactionModule = (function(commonModule) {
                 "thousands": "."
             },
             columns: [{
-                data: 'check',
-                name: 'check',
-                orderable: false,
-                searchable: false
-            }, {
                 data: 'name',
                 name: 'name'
             }, {
@@ -133,9 +128,6 @@ var transactionModule = (function(commonModule) {
             }, {
                 data: 'total',
                 name: 'total'
-            }, {
-                data: 'total_margin',
-                name: 'total_margin'
             }, {
                 data: 'created_at',
                 name: 'created_at'
@@ -167,39 +159,6 @@ var transactionModule = (function(commonModule) {
                         .draw();
                 }
             });
-        });
-
-    };
-
-    var _printTransaction = function() {
-        $("button#printTransaction").on('click', function() {
-            var query = $('form#print input[name="selected_transactions[]"]').serialize();
-            window.location = '/transaction/print?' + query;
-            // $.ajax({
-            //     method: "POST",
-            //     url: "/transaction/print",
-            //     data: $('form#print').serialize(),
-            //     dataType: 'json'
-            // }).done(function(response) {
-            //     if (response.status == 1) {
-            //         swal({
-            //             title: "Good!",
-            //             text: response.message,
-            //             type: "success",
-            //             timer: 3000
-            //         }, function() {
-            //             window.location = "/transaction";
-            //         });
-            //     } else {
-            //         swal({
-            //             title: "Oops!",
-            //             text: response.message,
-            //             type: "error",
-            //             timer: 3000
-            //         });
-            //     }
-            // });
-
         });
 
     };

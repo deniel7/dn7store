@@ -21,7 +21,7 @@
           <li class="treeview">
             <a href="#"><i class="fa fa-area-chart"></i> <span>Reports</span> <i class="fa fa-angle-left pull-right"></i></a>
             <ul class="treeview-menu">
-              <li><a href="#">Report X</a></li>
+              <li {{ \Request::segment(1) == 'report' ? 'class="active"' : '' }}><a href="{{ url('/report') }}">Sales Report</a></li>
             </ul>
           </li>
 

@@ -1,67 +1,84 @@
-Nama Produk,Harga,Reseller Price,Stok,Size,color
-CELANA PANJANG NIKE PRO COMBAT BASELAYER,180000,165000,17,S,black
-CELANA PANJANG NIKE PRO COMBAT BASELAYER,180000,165000,17,M,black
-CELANA PANJANG NIKE PRO COMBAT BASELAYER,180000,165000,17,L,black
-CELANA PANJANG NIKE PRO COMBAT BASELAYER,180000,165000,17,XL,black
-CELANA PANJANG NIKE PRO COMBAT BASELAYER,180000,165000,17,XXL,black
-CELANA PANJANG Under Armour UA PRO COMBAT BASELAYER,165000,145000,14,S,black
-CELANA PANJANG Under Armour UA PRO COMBAT BASELAYER,165000,145000,14,M,black
-CELANA PANJANG Under Armour UA PRO COMBAT BASELAYER,165000,145000,14,L,black
-CELANA PANJANG Under Armour UA PRO COMBAT BASELAYER,165000,145000,14,XL,black
-CELANA PANJANG Under Armour UA PRO COMBAT BASELAYER,165000,145000,14,XXL,black
-Celana Nike Pro Combat Baselayer,140000,125000,23,S,black
-Celana Nike Pro Combat Baselayer,140000,125000,23,M,black
-Celana Nike Pro Combat Baselayer,140000,125000,23,L,black
-Celana Nike Pro Combat Baselayer,140000,125000,23,XL,black
-Celana Nike Pro Combat Baselayer,140000,125000,23,XXL,black
-Celana Pendek Nike Pro Combat BaseLayer Black Green,150000,125000,12,M,Black Green
-Celana Pendek Nike Pro Combat BaseLayer Black Green,150000,125000,12,L,Black Green
-Celana Pendek Nike Pro Combat BaseLayer Black Green,150000,125000,12,XL,Black Green
-Celana Pendek Nike Pro Combat Baselayer Grey,150000,125000,7,M,Grey
-Celana Pendek Nike Pro Combat Baselayer Grey,150000,125000,7,L,Grey
-Celana Pendek Nike Pro Combat Baselayer Grey,150000,125000,7,XL,Grey
-Celana Pendek Nike Pro Combat Baselayer White,150000,125000,5,M,White
-Celana Pendek Nike Pro Combat Baselayer White,150000,125000,5,L,White
-Celana Pendek Nike Pro Combat Baselayer White,150000,125000,5,XL,White
-Celana halfpants 3/4 Nike Pro Combat Baselayer,175000,150000,5,M,Black
-Celana halfpants 3/4 Nike Pro Combat Baselayer,175000,150000,5,L,Black
-Celana halfpants 3/4 Nike Pro Combat Baselayer,175000,150000,5,XL,Black
-Kaos Nike Pro Combat Baselayer,170000,155000,3,M,Black
-Kaos Nike Pro Combat Baselayer,170000,155000,3,L,Black
-Kaos Nike Pro Combat Baselayer,170000,155000,3,XL,Black
-Kaos Nike Pro Combat Baselayer 2 color,190000,180000,3,M,Black Red
-Kaos Nike Pro Combat Baselayer 2 color,190000,180000,3,L,Black Red
-Kaos Nike Pro Combat Baselayer 2 color,190000,180000,3,XL,Black Red
-Nike Pro Combat Base Layer Lengan Panjang Blue,200000,190000,10,M,Blue
-Nike Pro Combat Base Layer Lengan Panjang Blue,200000,190000,10,L,Blue
-Nike Pro Combat Base Layer Lengan Panjang Blue,200000,190000,10,XL,Blue
-Nike Pro Combat Baselayer Lengan Panjang Darkblue Orange,200000,190000,2,M,Darkblue Orange
-Nike Pro Combat Baselayer Lengan Panjang Darkblue Orange,200000,190000,2,L,Darkblue Orange
-Nike Pro Combat Baselayer Lengan Panjang Darkblue Orange,200000,190000,2,XL,Darkblue Orange
-Nike Pro Combat Baselayer Lengan Panjang White,200000,190000,3,M,White
-Nike Pro Combat Baselayer Lengan Panjang White,200000,190000,3,L,White
-Nike Pro Combat Baselayer Lengan Panjang White,200000,190000,3,XL,White
-Nike Pro Combat Baselayer Tangan Panjang Red,200000,190000,6,M,Red
-Nike Pro Combat Baselayer Tangan Panjang Red,200000,190000,6,L,Red
-Nike Pro Combat Baselayer Tangan Panjang Red,200000,190000,6,XL,Red
-Nike Pro Combat Singlet BaseLayer,150000,130000,2,M,Black
-Nike Pro Combat Singlet BaseLayer,150000,130000,2,L,Black
-Nike Pro Combat Singlet BaseLayer,150000,130000,2,XL,Black
-Nike Pro Combat Singlet Baselayer,150000,130000,1,M,Darkblue Orange
-Nike Pro Combat Singlet Baselayer,150000,130000,1,L,Darkblue Orange
-Nike Pro Combat Singlet Baselayer,150000,130000,1,XL,Darkblue Orange
-SETELAN BASELAYER NIKE PRO COMBAT BLACK,320000,320000,8,M,Black
-SETELAN BASELAYER NIKE PRO COMBAT BLACK,320000,320000,8,L,Black
-SETELAN BASELAYER NIKE PRO COMBAT BLACK,320000,320000,8,XL,Black
-celana Nike Pro Combat BaseLayer Darkblue Orange,150000,140000,7,M,Dark Blue Orange
-celana Nike Pro Combat BaseLayer Darkblue Orange,150000,140000,7,L,Dark Blue Orange
-celana Nike Pro Combat BaseLayer Darkblue Orange,150000,140000,7,XL,Dark Blue Orange
-celana panjang gym / fitnes legging nike pro combat White,180000,165000,7,M,White
-celana panjang gym / fitnes legging nike pro combat White,180000,165000,7,L,White
-celana panjang gym / fitnes legging nike pro combat White,180000,165000,7,XL,White
-celana training panjang nike fc,175000,175000,5,M,Black
-celana training panjang nike fc,175000,175000,5,L,Black
-celana training panjang nike fc,175000,175000,5,XL,Black
-setelan baselayer nike procombat white,330000,330000,10,M,white
-setelan baselayer nike procombat white,330000,330000,10,L,white
-setelan baselayer nike procombat white,330000,330000,10,XL,white
+Nama Produk,Harga,Reseller Price,Stok,Size,color,Buy Price
+Celana Panjang Nike Pro Combat Baselayer Hitam,180000,165000,0,S,black,115000
+Celana Panjang Nike Pro Combat Baselayer Hitam,180000,165000,0,M,black,115000
+Celana Panjang Nike Pro Combat Baselayer Hitam,180000,165000,0,L,black,115000
+Celana Panjang Nike Pro Combat Baselayer Hitam,180000,165000,0,XL,black,115000
+Celana Panjang Nike Pro Combat Baselayer Hitam,180000,165000,0,XXL,black,115000
+Celana Panjang Under Armour UA Pro Combat Baselayer,165000,145000,5,S,black,95000
+Celana Panjang Under Armour UA Pro Combat Baselayer,165000,145000,2,M,black,95000
+Celana Panjang Under Armour UA Pro Combat Baselayer,165000,145000,0,L,black,95000
+Celana Panjang Under Armour UA Pro Combat Baselayer,165000,145000,6,XL,black,95000
+Celana Panjang Under Armour UA Pro Combat Baselayer,165000,145000,4,XXL,black,95000
+Celana Pendek Nike Pro Combat Baselayer Hitam,140000,125000,1,S,black,85000
+Celana Pendek Nike Pro Combat Baselayer Hitam,140000,125000,1,M,black,85000
+Celana Pendek Nike Pro Combat Baselayer Hitam,140000,125000,3,L,black,85000
+Celana Pendek Nike Pro Combat Baselayer Hitam,140000,125000,0,XL,black,85000
+Celana Pendek Nike Pro Combat Baselayer Hitam,140000,125000,0,XXL,black,85000
+Celana Pendek Nike Pro Combat BaseLayer Black Green,150000,125000,1,M,Black Green,90000
+Celana Pendek Nike Pro Combat BaseLayer Black Green,150000,125000,2,L,Black Green,90000
+Celana Pendek Nike Pro Combat BaseLayer Black Green,150000,125000,0,XL,Black Green,90000
+Celana Pendek Nike Pro Combat Baselayer Grey,150000,125000,3,M,Grey,90000
+Celana Pendek Nike Pro Combat Baselayer Grey,150000,125000,1,L,Grey,90000
+Celana Pendek Nike Pro Combat Baselayer Grey,150000,125000,0,XL,Grey,90000
+Celana Pendek Nike Pro Combat Baselayer White,150000,125000,1,M,White,90000
+Celana Pendek Nike Pro Combat Baselayer White,150000,125000,3,L,White,90000
+Celana Pendek Nike Pro Combat Baselayer White,150000,125000,2,XL,White,90000
+Celana halfpants 3/4 Nike Pro Combat Baselayer,175000,150000,3,M,Black,120000
+Celana halfpants 3/4 Nike Pro Combat Baselayer,175000,150000,3,L,Black,120000
+Celana halfpants 3/4 Nike Pro Combat Baselayer,175000,150000,3,XL,Black,120000
+Kaos Nike Pro Combat Baselayer Hitam,170000,155000,2,M,Black,115000
+Kaos Nike Pro Combat Baselayer Hitam,170000,155000,0,L,Black,115000
+Kaos Nike Pro Combat Baselayer Hitam,170000,155000,0,XL,Black,115000
+Kaos Nike Pro Combat Baselayer 2 color,190000,180000,1,M,Black Red,115000
+Kaos Nike Pro Combat Baselayer 2 color,190000,180000,1,L,Black Red,115000
+Kaos Nike Pro Combat Baselayer 2 color,190000,180000,0,XL,Black Red,115000
+Nike Pro Combat Base Layer Lengan Panjang Blue,200000,190000,0,M,Blue,140000
+Nike Pro Combat Base Layer Lengan Panjang Blue,200000,190000,0,L,Blue,140000
+Nike Pro Combat Base Layer Lengan Panjang Blue,200000,190000,1,XL,Blue,140000
+Nike Pro Combat Baselayer Lengan Panjang Darkblue Orange,200000,190000,0,M,Darkblue Orange,140000
+Nike Pro Combat Baselayer Lengan Panjang Darkblue Orange,200000,190000,0,L,Darkblue Orange,140000
+Nike Pro Combat Baselayer Lengan Panjang Darkblue Orange,200000,190000,0,XL,Darkblue Orange,140000
+Nike Pro Combat Baselayer Lengan Panjang White,200000,190000,2,M,White,140000
+Nike Pro Combat Baselayer Lengan Panjang White,200000,190000,1,L,White,140000
+Nike Pro Combat Baselayer Lengan Panjang White,200000,190000,1,XL,White,140000
+Nike Pro Combat Baselayer Lengan Panjang Red,200000,190000,0,M,Red,140000
+Nike Pro Combat Baselayer Lengan Panjang Red,200000,190000,0,L,Red,140000
+Nike Pro Combat Baselayer Lengan Panjang Red,200000,190000,0,XL,Red,140000
+Nike Pro Combat Singlet BaseLayer,150000,130000,0,M,Black,85000
+Nike Pro Combat Singlet BaseLayer,150000,130000,1,L,Black,85000
+Nike Pro Combat Singlet BaseLayer,150000,130000,0,XL,Black,85000
+Kaos Nike Pro Combat Base Layer Darkblue Orange,170000,155000,3,M,Darkblue Orange,115000
+Kaos Nike Pro Combat Base Layer Darkblue Orange,170000,155000,1,L,Darkblue Orange,115000
+Kaos Nike Pro Combat Base Layer Darkblue Orange,170000,155000,0,XL,Darkblue Orange,115000
+Celana Pendek Nike Pro Combat BaseLayer Darkblue Orange,150000,140000,1,M,Dark Blue Orange,90000
+Celana Pendek Nike Pro Combat BaseLayer Darkblue Orange,150000,140000,0,L,Dark Blue Orange,90000
+Celana Pendek Nike Pro Combat BaseLayer Darkblue Orange,150000,140000,0,XL,Dark Blue Orange,90000
+celana panjang gym / fitnes legging nike pro combat White,180000,165000,0,M,White,120000
+celana panjang gym / fitnes legging nike pro combat White,180000,165000,1,L,White,120000
+celana panjang gym / fitnes legging nike pro combat White,180000,165000,3,XL,White,120000
+celana training panjang nike fc,175000,175000,0,M,Black,115000
+celana training panjang nike fc,175000,175000,0,L,Black,115000
+celana training panjang nike fc,175000,175000,0,XL,Black,115000
+Nike Pro Combat Baselayer Lengan Panjang Hitam,200000,190000,0,S,Black,140000
+Nike Pro Combat Baselayer Lengan Panjang Hitam,200000,190000,0,M,Black,140000
+Nike Pro Combat Baselayer Lengan Panjang Hitam,200000,190000,0,L,Black,140000
+Nike Pro Combat Baselayer Lengan Panjang Hitam,200000,190000,2,XL,Black,140000
+Nike Pro Combat Baselayer Lengan Panjang Hitam,200000,190000,0,XXL,Black,140000
+Legging Pro Combat Compression Vansydical Army Hitam Abu,190000,170000,3,S,Black Grey,90000
+Legging Pro Combat Compression Vansydical Army Hitam Abu,190000,170000,3,M,Black Grey,90000
+Legging Pro Combat Compression Vansydical Army Hitam Abu,190000,170000,3,L,Black Grey,90000
+Legging Pro Combat Compression Vansydical Army Hijau ,190000,170000,3,S,Green,90000
+Legging Pro Combat Compression Vansydical Army Hijau ,190000,170000,3,M,Green,90000
+Legging Pro Combat Compression Vansydical Army Hijau ,190000,170000,3,L,Green,90000
+Legging Pro Combat Compression Vansydical Army Abu Putih ,190000,170000,3,S,Grey White,90000
+Legging Pro Combat Compression Vansydical Army Abu Putih ,190000,170000,3,M,Grey White,90000
+Legging Pro Combat Compression Vansydical Army Abu Putih ,190000,170000,3,L,Grey White,90000
+Kaos Baselayer Compression lengan pendek Army Hitam Abu,165000,145000,2,S,Black Grey,105000
+Kaos Baselayer Compression lengan pendek Army Hitam Abu,165000,145000,2,M,Black Grey,105000
+Kaos Baselayer Compression lengan pendek Army Hitam Abu,165000,145000,2,L,Black Grey,105000
+Kaos Baselayer Compression lengan pendek Army Hijau,165000,145000,2,S,Green,105000
+Kaos Baselayer Compression lengan pendek Army Hijau,165000,145000,2,M,Green,105000
+Kaos Baselayer Compression lengan pendek Army Hijau,165000,145000,2,L,Green,105000
+Kaos Baselayer Compression lengan pendek Army Abu Putih,165000,145000,2,S,Grey White,105000
+Kaos Baselayer Compression lengan pendek Army Abu Putih,165000,145000,2,M,Grey White,105000
+Kaos Baselayer Compression lengan pendek Army Abu Putih,165000,145000,2,L,Grey White,105000

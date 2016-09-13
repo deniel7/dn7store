@@ -41,6 +41,7 @@ Route::get('/', function () {
     /* Datatable */
         Route::post('datatable/items', 'ItemController@datatable');
         Route::post('datatable/transactions', 'TransactionController@datatable');
+        Route::post('datatable/report', 'ReportsController@datatable');
 
     /* Select2 */
         Route::post('select2/items', 'ItemController@select2');
@@ -54,6 +55,6 @@ Route::get('/', function () {
         Route::resource('transaction', 'TransactionController');
 
     /* Report */
-
+        Route::get('report', 'ReportsController@getIndex');
     /* System */
     });

@@ -22,7 +22,8 @@ class TransactionController extends Controller
     public function datatable()
     {
         $items = DB::table('transactions')
-        ->select(['id', 'name', 'address', 'source', 'total', 'created_at']);
+        ->select(['id', 'name', 'address', 'source', 'total', 'total_margin', 'created_at'])
+        ->orderBy('id', 'desc');
 
         return Datatables::of($items)
         ->addColumn('check', '<input type="checkbox" name="selected_transactions[]" value="{{ $id }}">')
@@ -30,6 +31,7 @@ class TransactionController extends Controller
         ->editColumn('address', '<span class="pull-right">{{ $address }}</span>')
         ->editColumn('source', '<span class="pull-center"><b>{{ $source }}</b></span>')
         ->editColumn('total', '<span class="pull-right">{{ number_format($total,0,".",",") }}</span>')
+        ->editColumn('total_margin', '<span class="pull-right">{{ number_format($total_margin,0,".",",") }}</span>')
         ->editColumn('created_at', '<span class="pull-right">{{ $created_at }}</span>')
         ->addColumn('action', function ($item) {
             $html = '<div style="width: 70px; margin: 0px auto;" class="text-center btn-group btn-group-justified" role="group">';
@@ -83,6 +85,7 @@ class TransactionController extends Controller
         $transaction->address = $request->input('address');
         $transaction->source = $request->input('source');
         $transaction->total = 0;
+        $transaction->total_margin = 0;
         $transaction->phone = $request->input('phone');
         $transaction->name_pengirim = $request->input('name_pengirim');
         $transaction->phone_pengirim = $request->input('phone_pengirim');
@@ -91,6 +94,7 @@ class TransactionController extends Controller
 
         try {
             $total = 0;
+            $total_margin = 0;
             foreach ($product_ids as $product_id) {
                 $items = Item::where('id', '=', $product_ids[$i])->get();
                 if ($items->count() == 1) {
@@ -102,14 +106,19 @@ class TransactionController extends Controller
 
                     if (empty($transaction->name_pengirim)) {
                         $transaction_detail->subtotal = $quantities[$i] * $item->normal_price;
+
+                        $transaction_detail->margin = ($quantities[$i] * $item->normal_price) - ($quantities[$i] * $item->buy_price);
                     } else {
                         $transaction_detail->subtotal = $quantities[$i] * $item->reseller_price;
+
+                        $transaction_detail->margin = ($quantities[$i] * $item->reseller_price) - ($quantities[$i] * $item->buy_price);
                     }
 
                     $item->stok -= $quantities[$i];
                     $item->save();
 
                     $total += $transaction_detail->subtotal;
+                    $total_margin += $transaction_detail->margin;
 
                     $transaction_detail->save();
                     ++$i;
@@ -117,6 +126,7 @@ class TransactionController extends Controller
             }
 
             $transaction->total = $total;
+            $transaction->total_margin = $total_margin;
             $transaction->save();
 
             DB::commit();

@@ -17,6 +17,7 @@ class CreateTransactionsTable extends Migration
             $table->string('address');
             $table->string('source');
             $table->bigInteger('total');
+            $table->bigInteger('total_margin');
             $table->string('name_pengirim');
             $table->string('phone_pengirim');
             $table->string('jne');

@@ -19,6 +19,7 @@ elixir(function(mix) {
     mix.scripts([
         'common.js',
         'item.js',
-        'transaction.js'
+        'transaction.js',
+        'report.js'
     ]);
 });

@@ -1,16 +1,15 @@
 @extends('layouts.backend')
-@section('title', 'Transaction')
+@section('title', 'Reports')
 @section('content')
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-  Transaction
+  Sales Report
   <small>List</small>
   </h1>
   <ol class="breadcrumb">
-    <li><a href="{{ url('/') }}"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-    <li><a href="#">Master</a></li>
-    <li><a href="{{ url('/transaction') }}">Transaction</a></li>
+    <li><a href="{{ url('/') }}"><i class="fa fa-tachometer"></i> Report</a></li>
+    <li><a href="{{ url('/report') }}">Sales</a></li>
     <li class="active">List</li>
   </ol>
 </section>
@@ -23,18 +22,7 @@
       <div class="box">
         <!-- /.box-header -->
         <div class="box-body">
-          <div class="btn-group">
-            <a href="{{ url('transaction/create') }}" class="btn btn-primary">
-            <i class="fa fa-plus fa-fw"></i> Add
-            </a>
-          </div>
-          <div class="btn-group">
-            <!-- <a href="{{ url('transaction/print') }}" class="btn btn-warning">
-            <i class="fa fa-plus fa-fw"></i> Print
-            </a>
- -->
-            <button type="button" id="printTransaction" class="btn btn-warning" name="print" value="Print"><i class="fa fa-check fa-fw"></i> Print</button>
-          </div>
+          
 
           <br><br>
           <div class="table-responsive">
@@ -44,12 +32,11 @@
             <table id="datatable" style="table-layout: fixed;" width="100%" class="table table-bReturned table-striped table-condensed">
               <thead>
                 <tr>
-                  <th></th>
+                  
                   <th>Name</th>
                   <th>Address</th>
                   <th>Source</th>
-                  <th>Total</th>
-                  <th>Total Margin</th>
+                  <th class="sum">Total</th>
                   <th>Created at</th>
                   <th>Action</th>
                 </tr>
@@ -58,12 +45,11 @@
               </tbody>
               <tfoot>
               <tr>
-                  <th></th>
+                  
                   <th>Name</th>
                   <th>Address</th>
                   <th>Source</th>
                   <th>Total</th>
-                  <th>Total Margin</th>
                   <th>Created at</th>
                 <th></th>
               </tr>
@@ -82,9 +68,12 @@
 </form>
 <!-- /.content -->
 <!-- page script -->
+
+<!-- page script -->
 <script type="text/javascript">
 $(document).ready(function(){
-transactionModule.init();
+reportModule.init();
 });
 </script>
+
 @endsection

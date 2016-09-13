@@ -77,6 +77,13 @@
                 <!-- <input type="hidden" name="reseller_price"> -->
               </div>
             </div>
+            <div class="col-lg-3">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Buy Price</label>
+                <input type="text" class="form-control number" name="buy_price" value="{{ old('buy_price') }}">
+              </div>
+            </div>
+
           </div>
           <div class="row">
             <div class="col-lg-12">

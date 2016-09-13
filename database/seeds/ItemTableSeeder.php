@@ -21,6 +21,7 @@ class ItemTableSeeder extends Seeder
                 'stok' => $csv[$i][3],
                 'normal_price' => $csv[$i][1],
                 'reseller_price' => $csv[$i][2],
+                'buy_price' => $csv[$i][6],
                 'created_by' => 1,
                 'updated_by' => 1,
                 'created_at' => Date('Y-m-d H:i:s'),

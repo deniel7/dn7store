@@ -16,6 +16,7 @@ class CreateTransactionDetailsTable extends Migration
             $table->integer('item_id')->unsigned();
             $table->string('qty');
             $table->integer('subtotal');
+            $table->integer('margin');
             $table->timestamps();
         });
     }
