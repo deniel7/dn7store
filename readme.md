@@ -1,5 +1,5 @@
 ## README
-nambah tulisan
+
 ### PHP version
 
 5.5.9
@@ -38,11 +38,11 @@ Jangan lupa untuk menyesuaikan nama database dengan database yang sudah dibuat s
 
 Hasil akhirnya seperti ini:
 
-	DB_CONNECTION=pgsql
-	DB_HOST=localhost
-	DB_DATABASE=shopass
-	DB_USERNAME=yogya
-	DB_PASSWORD=secret
+    DB_CONNECTION=pgsql
+    DB_HOST=localhost
+    DB_DATABASE=shopass
+    DB_USERNAME=yogya
+    DB_PASSWORD=secret
 
 ### Database initialization
 
