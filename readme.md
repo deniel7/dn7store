@@ -1,7 +1,5 @@
 ## README
 
-Apps name : DN7 Store
-
 ### PHP version
 
 5.5.9
